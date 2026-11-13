@@ -109,9 +109,9 @@ cargo run --release
 
 ## Download Rust Shield
 
-**Windows executable downloads and versioned application builds will be distributed through the public [Rust Shield Releases page](https://github.com/Galax71/Rust-Shield-Releases/releases).** Each published version will have its own GitHub Release, with its downloadable executable or installer attached as a release asset. Older published versions will remain accessible from the releases history unless explicitly withdrawn.
+**Windows executable downloads and versioned application builds will be distributed through the public [Rust Shield Releases page](https://github.com/Galax71/Rust-Shield-Releases/releases).** Each published version will have its own GitHub Release with **two Windows download choices**: an installer (`RustShield-Setup-VERSION-windows-x64.exe`) that installs the app with Start Menu shortcuts and uninstall support, and a portable executable (`RustShield-Portable-VERSION-windows-x64.exe`) that runs directly without an installer. Older published versions will remain accessible from the releases history unless explicitly withdrawn.
 
-**Do not use source-code ZIP archives as Windows executables.** Download the attached `.exe` or installer asset for the version you want. No build should be advertised as verified or production-ready before it has been tested.
+**Publication is intentionally manual:** the private source repository's Windows release workflow builds both files and publishes them to the public releases repository only when explicitly dispatched with publishing enabled. It requires a repository secret with public-repository Contents write permission. The workflow and generated binaries still require testing before any release is considered verified.\n\n**Do not use source-code ZIP archives as Windows executables.** Download the attached `.exe` or installer asset for the version you want. No build should be advertised as verified or production-ready before it has been tested.
 
 ## Repository and platform overview
 
