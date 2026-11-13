@@ -7,7 +7,27 @@ body:
     id: platform
     attributes:
       label: Platform
-      options: [Windows, Android, Other]
+      options:
+        - Windows 11
+        - Windows 10
+        - Windows (other)
+        - Linux - Ubuntu
+        - Linux - Debian
+        - Linux - Fedora
+        - Linux - Arch
+        - Linux - Other distribution
+        - macOS
+        - Android
+        - Multiple platforms
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: os_details
+    attributes:
+      label: OS version / Linux distribution
+      description: For Linux, include distribution, release and desktop environment. For macOS or Android, include OS version.
+      placeholder: "e.g. Ubuntu 24.04 GNOME, macOS 15, Android 15"
     validations:
       required: true
   - type: input
