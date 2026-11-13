@@ -120,7 +120,7 @@ cargo run --release
 | Windows 10 / 11 | [platforms/windows-10-11](platforms/windows-10-11) | WebView2 | Active prototype |
 | Linux | [platforms/linux](platforms/linux) | WebKitGTK | Prototype, untested |
 | macOS | [platforms/macos](platforms/macos) | WKWebView | Prototype, untested |
-| Android | [platforms/android](platforms/android) | Android System WebView | Planning/documentation |
+| Android | [platforms/android](platforms/android) | Android System WebView | Basic test prototype in private source; APK build unverified |
 
 **Source and releases:** This public repository documents release status and does not include the private source. Development source lives in the private [Rust-Brave-inspired-Browser](https://github.com/Galax71/Rust-Brave-inspired-Browser) repository. The [Rust-Shield-Releases](https://github.com/Galax71/Rust-Shield-Releases) repository is intended for public compiled builds; the presence of that repository does not establish that a verified installer or release is available.
 
@@ -161,6 +161,24 @@ Only install builds you trust. Leave Microsoft Defender and Windows security fea
 ## Release availability
 
 **Versioned executable downloads belong on this repository's GitHub Releases page. No verified signed installer or production-ready release is claimed here.** Use the [Releases page](https://github.com/Galax71/Rust-Shield-Releases/releases) to see whether a downloadable build has actually been published. Feature statuses reflect the development source at the time of this documentation update and are **not automatically synchronized**.
+
+## Bug reports and feature requests
+
+**[🐛 Report a bug](https://github.com/Galax71/Rust-Shield-Releases/issues/new/choose) · [📋 View reported issues](https://github.com/Galax71/Rust-Shield-Releases/issues) · [💡 Suggest a feature](https://github.com/Galax71/Rust-Shield-Releases/issues/new/choose)**
+
+Use the public **Rust Shield Releases** issue tracker for Windows, Linux, macOS and Android feedback. Choose **Bug report** or **Feature request** to open the appropriate form.
+
+| Operating system | Report options | Additional information |
+| --- | --- | --- |
+| 🪟 **Windows** | Windows 11, Windows 10, other Windows | Version/build number |
+| 🐧 **Linux** | Ubuntu, Debian, Fedora, Arch, other distributions | Distribution release and desktop environment |
+| 🍎 **macOS** | macOS | macOS version and device architecture |
+| 🤖 **Android** | Android | Android version and device model |
+| 🌐 **Multiple / Other** | Multiple platforms or other OS | Explain which systems are affected |
+
+For bug reports, include the **Rust Shield version**, steps to reproduce, expected versus actual behavior, and any error messages or screenshots. **Remove passwords, tokens, personal data and private browsing details before posting.** Linux and macOS support remains experimental; choosing an OS does not imply a working build is available.
+
+Source-code contributors with repository access can also use the [private developer issue tracker](https://github.com/Galax71/Rust-Brave-inspired-Browser/issues).
 
 ## Contributing and feedback
 
