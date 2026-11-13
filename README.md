@@ -47,7 +47,7 @@ Rust Shield is an independent browser experiment written primarily in Rust. Its 
 | Two-way and four-way Snap Layout previews | 🟡 **Needs testing** | Preview UI implemented; native Windows integration absent |
 | Print Screen / Snipping Tool while focused | 🔴 **Not functional** | Reported to fail when Rust Shield has focus |
 | Resize borderless window from edges/corners | 🔴 **Not functional** | Dragging borders does not resize the window |
-| Floating Snap Layout popup | 🔴 **Not functional** | Current popup expands toolbar and shifts webpage |
+| Floating Snap Layout popup | 🟡 **Needs more testing — functional** | Popup is reported functional; verify that it floats without expanding the toolbar or shifting the webpage |
 | Windows native multi-app Snap Assist | ⚪ **Not implemented** | Custom positioning is not the Windows Snap Assist picker |
 | Preserve inactive tab state | 🔴 **Not functional** | Switching tabs intentionally destroys inactive WebViews |
 | Approved taskbar/application icon | ⚪ **Not implemented** | Approved artwork not integrated into Windows executable |
@@ -78,7 +78,7 @@ Rust Shield is an independent browser experiment written primarily in Rust. Its 
 
 - **Print Screen:** Windows' PrtSc/Snipping Tool shortcut may not activate while Rust Shield has focus.
 - **Window resizing:** Dragging the edges and corners of the borderless window is not yet working.
-- **Snap preview:** The popup currently expands the toolbar WebView, which can shift the page downward.
+- **Snap preview:** Floating Snap Layout popup is reported functional, but further testing is needed to confirm it does not expand the toolbar or shift the webpage.
 - **Snap Assist:** Selecting a custom snap zone repositions Rust Shield, but does not yet integrate with Windows' native multi-app Snap Assist.
 - **Windows trust prompts:** Microsoft Defender may scan newly built, unsigned executables. This alone is not a malware finding. Do not disable Defender to run the app.
 
