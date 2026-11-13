@@ -6,7 +6,19 @@ body:
     id: platform
     attributes:
       label: Platform
-      options: [Windows, Android, Both]
+      options:
+        - Windows 11
+        - Windows 10
+        - Windows (other)
+        - Linux - Ubuntu
+        - Linux - Debian
+        - Linux - Fedora
+        - Linux - Arch
+        - Linux - Other distribution
+        - macOS
+        - Android
+        - Multiple platforms
+        - Other
   - type: textarea
     id: details
     attributes:
