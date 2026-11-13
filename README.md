@@ -40,24 +40,25 @@ Rust Shield is an independent browser experiment written primarily in Rust. Its 
 | Custom title-bar minimize, maximize, close | 🟢 **Working** | User-confirmed controls |
 | Basic left/right window snapping | 🟢 **Working** | User-confirmed left/right snapping |
 | WebView2 webpage rendering | 🟢 **Working** | User has opened and interacted with the prototype |
-| Address/search and navigation controls | 🟡 **Needs testing** | Implemented; comprehensive behavior not verified |
-| Tab creation, switching, closing | 🟡 **Needs testing** | Implemented, but switching discards inactive WebViews and loses live page state |
-| Browser-inspired toolbar themes | 🟡 **Needs testing** | Presets exist; not all layouts verified |
-| Settings and persistence | 🟡 **Needs testing** | Code exists; full end-to-end validation outstanding |
+| Address/search and navigation controls | 🟢 **Working** | User confirmed toolbar buttons work again after the JavaScript syntax fix; broader regression testing remains |
+| Tab creation, switching, closing | 🟡 **Needs testing** | Inactive WebViews now remain alive; Windows session and memory testing required |
+| Browser-inspired toolbar themes | 🟡 **Needs testing** | Light/Dark styling and preset selection implemented; full native layouts are not available |
+| Settings and persistence | 🟡 **Needs testing** | Light/Dark, layout, home button and Settings navigation have updated code; full Windows end-to-end validation remains |
 | Two-way and four-way Snap Layout previews | 🟡 **Needs testing** | Preview UI implemented; native Windows integration absent |
 | Print Screen / Snipping Tool while focused | 🔴 **Not functional** | Reported to fail when Rust Shield has focus |
-| Resize borderless window from edges/corners | 🔴 **Not functional** | Dragging borders does not resize the window |
+| Resize borderless window from edges/corners | 🟡 **Reported functional — needs testing** | Resizing reported functional; confirm edge and corner dragging across window states |
 | Floating Snap Layout popup | 🟡 **Needs more testing — functional** | Popup is reported functional; verify that it floats without expanding the toolbar or shifting the webpage |
 | Windows native multi-app Snap Assist | ⚪ **Not implemented** | Custom positioning is not the Windows Snap Assist picker |
-| Preserve inactive tab state | 🔴 **Not functional** | Switching tabs intentionally destroys inactive WebViews |
-| Approved taskbar/application icon | ⚪ **Not implemented** | Approved artwork not integrated into Windows executable |
+| Preserve inactive tab state | 🟡 **Needs testing** | Code now hides inactive WebViews instead of destroying them; not yet Windows-tested |
+| Approved taskbar/application icon | 🟡 **Needs testing** | Supplied shield emblem committed; Windows build script embeds the icon, but the built EXE/taskbar icon are not yet verified |
 | Built-in content/ad blocking and privacy shields | ⚪ **Not implemented** | No verified blocking engine |
 | Tor browsing and isolated tab processes | ⚪ **Not implemented** | Not available in prototype |
 | Extension compatibility | ⚪ **Not implemented** | No extension subsystem |
-| Verified installer and signed release | ⚪ **Not implemented** | No verified signed installer |
+| Windows installer and portable EXE | 🟡 **Needs testing** | Build and local release scripts exist; installed behavior and publishing require verification |
+| Digitally signed release | ⚪ **Not implemented** | No verified code-signing process |
 | Servo as primary rendering engine | ⚪ **Not implemented** | WebView2 remains the current Windows renderer |
-| Linux/macOS functional builds | 🟡 **Needs testing** | Prototype source exists, not tested |
-| Android browser application | ⚪ **Not implemented** | Documentation/planning only |
+| Linux/macOS functional builds | 🟡 **Needs testing** | Platform scaffolding exists; successful native builds not confirmed |
+| Android browser application | 🟡 **Needs testing** | Basic Java/Android WebView test app and local APK build script added; successful build and device testing not yet confirmed |
 
 ## What is implemented today?
 
@@ -72,12 +73,12 @@ Rust Shield is an independent browser experiment written primarily in Rust. Its 
 | Window layouts | Custom two-way and four-way snap preview UI; not native Windows Snap Assist |
 | Search | Brave Search default, with other search engine options in the prototype |
 
-**Important limitation:** Switching away from a tab can destroy its WebView and later reload its URL. Unsaved forms, page state, and media playback may be lost. Do not rely on this prototype for sensitive or important browsing.
+**Important limitation:** The current source attempts to preserve inactive WebViews rather than destroy them; behavior still requires Windows testing. Unsaved forms, page state, and media playback may be lost. Do not rely on this prototype for sensitive or important browsing.
 
 ## Known issues and work in progress
 
 - **Print Screen:** Windows' PrtSc/Snipping Tool shortcut may not activate while Rust Shield has focus.
-- **Window resizing:** Dragging the edges and corners of the borderless window is not yet working.
+- **Window resizing:** Edge/corner resizing has been reported functional; verify all edges, corners, and maximized/restored states.
 - **Snap preview:** Floating Snap Layout popup is reported functional, but further testing is needed to confirm it does not expand the toolbar or shift the webpage.
 - **Snap Assist:** Selecting a custom snap zone repositions Rust Shield, but does not yet integrate with Windows' native multi-app Snap Assist.
 - **Windows trust prompts:** Microsoft Defender may scan newly built, unsigned executables. This alone is not a malware finding. Do not disable Defender to run the app.
