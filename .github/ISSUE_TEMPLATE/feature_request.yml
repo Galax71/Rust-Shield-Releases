@@ -1,0 +1,15 @@
+name: Feature request
+description: Suggest a Rust Shield improvement
+title: "[Feature] "
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Windows, Android, Both]
+  - type: textarea
+    id: details
+    attributes:
+      label: Describe the requested feature
+    validations:
+      required: true
