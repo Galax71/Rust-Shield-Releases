@@ -107,6 +107,12 @@ cargo run --release
 > [!NOTE]
 > These commands are for development and testing, **not** a recommendation to build while the known windowing issues remain. GitHub Actions and local Windows results should be verified before publishing a release.
 
+## Download Rust Shield
+
+**Windows executable downloads and versioned application builds will be distributed through the public [Rust Shield Releases page](https://github.com/Galax71/Rust-Shield-Releases/releases).** Each published version will have its own GitHub Release, with its downloadable executable or installer attached as a release asset. Older published versions will remain accessible from the releases history unless explicitly withdrawn.
+
+**Do not use source-code ZIP archives as Windows executables.** Download the attached `.exe` or installer asset for the version you want. No build should be advertised as verified or production-ready before it has been tested.
+
 ## Repository and platform overview
 
 | Platform | Location | Renderer / approach | Status |
@@ -154,7 +160,7 @@ Only install builds you trust. Leave Microsoft Defender and Windows security fea
 
 ## Release availability
 
-**No verified signed installer or production-ready release is claimed here.** Use the [Releases page](https://github.com/Galax71/Rust-Shield-Releases/releases) to see whether a downloadable build has actually been published. Feature statuses reflect the development source at the time of this documentation update and are **not automatically synchronized**.
+**Versioned executable downloads belong on this repository's GitHub Releases page. No verified signed installer or production-ready release is claimed here.** Use the [Releases page](https://github.com/Galax71/Rust-Shield-Releases/releases) to see whether a downloadable build has actually been published. Feature statuses reflect the development source at the time of this documentation update and are **not automatically synchronized**.
 
 ## Contributing and feedback
 
