@@ -51,7 +51,7 @@ Rust Shield is an independent browser experiment written primarily in Rust. Its 
 | Windows native multi-app Snap Assist | ⚪ **Not implemented** | Custom positioning is not the Windows Snap Assist picker |
 | Preserve inactive tab state | 🟡 **Needs testing** | Code now hides inactive WebViews instead of destroying them; not yet Windows-tested |
 | Approved taskbar/application icon | 🟡 **Needs testing** | Supplied shield emblem committed; Windows build script embeds the icon, but the built EXE/taskbar icon are not yet verified |
-| Built-in content/ad blocking and privacy shields | ⚪ **Not implemented** | No verified blocking engine |
+| Built-in content/ad blocking and privacy shields | 🟡 **Partial implementation — needs testing** | Experimental page-level guard blocks selected tracking hosts in fetch, XMLHttpRequest and sendBeacon; not full network/ad blocking or Brave Shields |
 | Tor browsing and isolated tab processes | ⚪ **Not implemented** | Not available in prototype |
 | Extension compatibility | ⚪ **Not implemented** | No extension subsystem |
 | Windows installer and portable EXE | 🟡 **Needs testing** | Build and local release scripts exist; installed behavior and publishing require verification |
@@ -155,7 +155,7 @@ Roadmap entries are **plans, not claims of completed functionality**.
 
 ## Security and privacy notes
 
-Rust Shield currently relies on the security properties of its embedded web renderer and the surrounding operating system. It has **not** been independently security audited. Do not assume Brave Shields, Tor isolation, hardened sandboxing, ad blocking, extension support, or other protections are present unless implemented and verified.
+Rust Shield currently relies on the security properties of its embedded web renderer and the surrounding operating system. It has **not** been independently security audited. An experimental page-level tracking guard is present but is not a comprehensive ad blocker or verified privacy protection. Do not assume Brave Shields, Tor isolation, hardened sandboxing, extension support, or other protections are present unless implemented and verified.
 
 Only install builds you trust. Leave Microsoft Defender and Windows security features enabled.
 
